@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Aide — Coupeur MP3</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, 'Segoe UI', Roboto, sans-serif;
+    background: #1a1a1a;
+    color: #e5e5e5;
+    padding: 40px 20px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .container { max-width: 820px; margin: 0 auto; }
+  h1 {
+    color: #4a9eff;
+    border-bottom: 2px solid #4a9eff;
+    padding-bottom: 12px;
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+  h2 {
+    color: #4a9eff;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border-left: 4px solid #4a9eff;
+    padding-left: 12px;
+  }
+  h3 {
+    color: #e5e5e5;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  p { margin: 10px 0; }
+  ul, ol { padding-left: 25px; }
+  li { margin: 6px 0; }
+  code {
+    background: #2b2b2b;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    color: #ffd580;
+    font-size: 0.92em;
+  }
+  .card {
+    background: #232323;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 15px 0;
+    border-left: 3px solid #4a9eff;
+  }
+  .card.warning { border-left-color: #f59e0b; }
+  .card.success { border-left-color: #22c55e; }
+  .card.danger  { border-left-color: #ef4444; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background: #232323;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+  }
+  th {
+    background: #2b2b2b;
+    color: #4a9eff;
+    font-weight: 600;
+  }
+  tr:last-child td { border-bottom: none; }
+  kbd {
+    background: #2b2b2b;
+    border: 1px solid #444;
+    border-bottom-width: 2px;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: 'Consolas', monospace;
+    font-size: 0.88em;
+    color: #fff;
+  }
+  .footer {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>✂️ Coupeur MP3 — Aide</h1>
+
+  <!-- ============ SOMMAIRE ============ -->
+  <div class="card">
+    <strong>📖 Sommaire</strong>
+    <ol>
+      <li><a href="#s1" style="color:#4a9eff">À quoi sert ce logiciel ?</a></li>
+      <li><a href="#s2" style="color:#4a9eff">Comment démarrer</a></li>
+      <li><a href="#s3" style="color:#4a9eff">Utilisation pas à pas</a></li>
+      <li><a href="#s4" style="color:#4a9eff">Exemples concrets</a></li>
+      <li><a href="#s5" style="color:#4a9eff">Fondu entrée / sortie</a></li>
+      <li><a href="#s6" style="color:#4a9eff">Raccourcis clavier</a></li>
+      <li><a href="#s7" style="color:#4a9eff">Formats de temps acceptés</a></li>
+      <li><a href="#s8" style="color:#4a9eff">Formats audio supportés</a></li>
+      <li><a href="#s9" style="color:#4a9eff">FAQ</a></li>
+      <li><a href="#s10" style="color:#4a9eff">Problèmes connus</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ 1 ============ -->
+  <h2 id="s1">1. 🎯 À quoi sert ce logiciel ?</h2>
+  <p>Ce logiciel vous permet de <strong>couper un extrait</strong> d'un fichier audio sans perdre en qualité. Par exemple :</p>
+  <ul>
+    <li>Extraire un refrain d'une chanson</li>
+    <li>Retirer une intro ou un silence au début</li>
+    <li>Couper un jingle dans un podcast</li>
+    <li>Récupérer juste 30 secondes d'un long enregistrement</li>
+  </ul>
+  <div class="card success">
+    Le fichier original n'est <strong>jamais modifié</strong> : un nouveau fichier est téléchargé avec <code>_cut</code> ajouté à la fin du nom.
+  </div>
+
+  <!-- ============ 2 ============ -->
+  <h2 id="s2">2. 🚀 Comment démarrer</h2>
+  <p>➤ <strong>Double-cliquez</strong> simplement sur <code>coupeur.html</code></p>
+  <p>➤ Il s'ouvre dans votre navigateur. C'est prêt !</p>
+  <p style="color:#888;font-size:14px">Si vous utilisez VS Code + Live Server, cliquez sur <strong>Go Live</strong> en bas à droite.</p>
+
+  <!-- ============ 3 ============ -->
+  <h2 id="s3">3. 📝 Utilisation pas à pas</h2>
+
+  <h3>Étape 1 — Sélectionner le fichier</h3>
+  <ul>
+    <li>Cliquez sur <strong>📂 Parcourir</strong> (ou <kbd>Ctrl</kbd>+<kbd>O</kbd>)</li>
+    <li>Choisissez votre fichier audio</li>
+  </ul>
+
+  <h3>Étape 2 — Indiquer le début et la fin</h3>
+  <ul>
+    <li>Cliquez sur la <strong>courbe</strong> → un curseur jaune apparaît</li>
+    <li>Cliquez sur <strong>⬇️ Ici</strong> à côté de "Début" ou "Fin"</li>
+    <li>Ou tapez directement dans les champs au format <code>hh:mm:ss</code></li>
+  </ul>
+
+  <h3>Étape 3 — (Facultatif) Écouter</h3>
+  <ul>
+    <li>Bouton <strong>▶ vert</strong> → joue 5 s depuis le début</li>
+    <li>Bouton <strong>▶ rouge</strong> → joue 5 s avant la fin</li>
+    <li>Touche <kbd>Échap</kbd> → arrête la lecture</li>
+  </ul>
+
+  <h3>Étape 4 — (Facultatif) Ajouter un fondu</h3>
+  <p>Cochez <strong>☐ Fondu entrée</strong> et/ou <strong>☐ Fondu sortie</strong>, puis indiquez la durée en secondes (0.5 par défaut).</p>
+
+  <h3>Étape 5 — Couper et sauvegarder</h3>
+  <p>Cliquez sur <strong>✂️ Couper et sauvegarder en MP3</strong>. Le fichier se télécharge automatiquement. 🎉</p>
+
+  <!-- ============ 4 ============ -->
+  <h2 id="s4">4. 💡 Exemples concrets</h2>
+
+  <div class="card">
+    📌 <strong>Règle importante à retenir :</strong><br>
+    <strong>Début</strong> = la 1ʳᵉ seconde qu'on <em>garde</em><br>
+    <strong>Fin</strong> = la dernière seconde qu'on <em>garde</em><br><br>
+    → Pour <strong>enlever le début</strong> d'un fichier, on met le "Début" <strong>après</strong> la partie à enlever.
+  </div>
+
+  <p>Toutes les valeurs ci-dessous utilisent le format <code>hh:mm:ss</code> (heures:minutes:secondes).</p>
+
+  <table>
+    <tr>
+      <th>Ce que vous voulez</th>
+      <th>Début</th>
+      <th>Fin</th>
+    </tr>
+    <tr>
+      <td><strong>Retirer les 9 premières secondes</strong><br>
+          <span style="color:#888;font-size:13px">(garder tout le reste)</span></td>
+      <td><code>00:00:09</code></td>
+      <td><em>laisser la durée totale</em></td>
+    </tr>
+    <tr>
+      <td><strong>Garder uniquement les 9 premières secondes</strong></td>
+      <td><code>00:00:00</code></td>
+      <td><code>00:00:09</code></td>
+    </tr>
+    <tr>
+      <td>Retirer 1 minute 30 au début</td>
+      <td><code>00:01:30</code></td>
+      <td><em>laisser la durée totale</em></td>
+    </tr>
+    <tr>
+      <td>Extraire un refrain entre 1 min 20 et 2 min 05</td>
+      <td><code>00:01:20</code></td>
+      <td><code>00:02:05</code></td>
+    </tr>
+    <tr>
+      <td>Récupérer 30 secondes à partir de 45 s</td>
+      <td><code>00:00:45</code></td>
+      <td><code>00:01:15</code></td>
+    </tr>
+    <tr>
+      <td>Extraire de 5 minutes à 7 min 30</td>
+      <td><code>00:05:00</code></td>
+      <td><code>00:07:30</code></td>
+    </tr>
+  </table>
+
+  <div class="card success">
+    💡 <strong>Astuce de pro :</strong> utilisez toujours le format complet
+    <code>hh:mm:ss</code>. C'est <strong>sans ambiguïté</strong> :<br>
+    • <code>00:00:09</code> = 9 secondes<br>
+    • <code>00:01:30</code> = 1 minute 30<br>
+    • <code>00:02:05</code> = 2 minutes 5 secondes<br>
+    • <code>01:15:00</code> = 1 heure et 15 minutes
+  </div>
+
+  <div class="card success">
+    💡 <strong>Après avoir chargé un fichier</strong>, le champ "Fin" est
+    <strong>automatiquement rempli</strong> avec la durée totale.
+    Donc pour retirer le début, modifiez juste le champ "Début" et laissez "Fin" tel quel.
+  </div>
+
+  <!-- ============ 5 ============ -->
+  <h2 id="s5">5. 🎚️ Fondu entrée / sortie</h2>
+  <p>Le fondu fait <strong>apparaître ou disparaître le son progressivement</strong>.</p>
+  <ul>
+    <li><strong>Fondu entrée</strong> : le son démarre en douceur</li>
+    <li><strong>Fondu sortie</strong> : le son s'estompe à la fin</li>
+  </ul>
+
+  <h3>Exemple concret</h3>
+  <p>Extrait de 30 secondes avec un fondu doux :</p>
+  <ul>
+    <li>Début = <code>00:00:00</code> / Fin = <code>00:00:30</code></li>
+    <li>☑ Fondu entrée : <code>1.0</code> secondes</li>
+    <li>☑ Fondu sortie : <code>2.0</code> secondes</li>
+  </ul>
+
+  <div class="card warning">
+    ⚠️ La <strong>somme des fondus</strong> ne doit pas dépasser la durée de l'extrait, sinon un message d'erreur s'affiche.
+  </div>
+
+  <!-- ============ 6 ============ -->
+  <h2 id="s6">6. ⌨️ Raccourcis clavier</h2>
+  <table>
+    <tr><th>Raccourci</th><th>Action</th></tr>
+    <tr><td><kbd>Ctrl</kbd> + <kbd>O</kbd></td><td>Ouvrir un fichier</td></tr>
+    <tr><td><kbd>Échap</kbd></td><td>Arrêter la lecture</td></tr>
+  </table>
+
+  <!-- ============ 7 ============ -->
+  <h2 id="s7">7. ⏱️ Formats de temps acceptés</h2>
+  <table>
+    <tr><th>Ce que vous tapez</th><th>Signification</th></tr>
+    <tr>
+      <td><code>00:00:09</code></td>
+      <td><strong>9 secondes</strong> — format complet, <span style="color:#22c55e">recommandé ⭐</span></td>
+    </tr>
+    <tr>
+      <td><code>00:01:30</code></td>
+      <td>1 minute et 30 secondes</td>
+    </tr>
+    <tr>
+      <td><code>01:15:00</code></td>
+      <td>1 heure et 15 minutes</td>
+    </tr>
+    <tr>
+      <td><code>9</code></td>
+      <td>9 secondes (raccourci)</td>
+    </tr>
+    <tr>
+      <td><code>45.5</code></td>
+      <td>45 secondes et demie</td>
+    </tr>
+    <tr>
+      <td><code>1:30</code></td>
+      <td>1 minute 30 (raccourci)</td>
+    </tr>
+  </table>
+
+  <div class="card success">
+    💡 <strong>Recommandation :</strong> utilisez toujours <code>hh:mm:ss</code>
+    (ex : <code>00:00:09</code>). C'est le format le plus clair et le plus sûr.
+    Les autres formats sont acceptés par tolérance.
+  </div>
+
+  <!-- ============ 8 ============ -->
+  <h2 id="s8">8. 🎵 Formats audio supportés</h2>
+  <table>
+    <tr><th>Format</th><th>Extension</th></tr>
+    <tr><td>MP3</td><td><code>.mp3</code> (le plus courant)</td></tr>
+    <tr><td>WAV</td><td><code>.wav</code></td></tr>
+    <tr><td>OGG</td><td><code>.ogg</code></td></tr>
+    <tr><td>M4A / AAC</td><td><code>.m4a</code></td></tr>
+    <tr><td>FLAC</td><td><code>.flac</code></td></tr>
+  </table>
+  <p style="color:#888;font-size:14px">L'export se fait toujours en MP3 (192 kbps).</p>
+
+  <!-- ============ 9 ============ -->
+  <h2 id="s9">9. ❓ FAQ</h2>
+
+  <h3>Mes fichiers sont-ils envoyés sur internet ?</h3>
+  <p><strong>NON !</strong> Tout se passe dans votre navigateur. Aucune donnée n'est transmise à un serveur.</p>
+
+  <h3>Le fichier original est-il modifié ?</h3>
+  <p>Jamais. Un <strong>nouveau fichier</strong> est téléchargé avec <code>_cut</code> ajouté au nom.</p>
+
+  <h3>Où est enregistré le fichier coupé ?</h3>
+  <p>Dans votre dossier <strong>Téléchargements</strong> par défaut. Le navigateur peut demander où l'enregistrer.</p>
+
+  <h3>Est-ce que je perds en qualité ?</h3>
+  <p>Un léger ré-encodage MP3 a lieu, mais <strong>inaudible</strong> dans la plupart des cas.</p>
+
+  <h3>Pourquoi utiliser <code>00:00:09</code> plutôt que <code>9</code> ?</h3>
+  <p>Le format <code>hh:mm:ss</code> est <strong>sans ambiguïté</strong>. Avec <code>9</code> seul, on pourrait se demander si c'est 9 secondes ou 9 minutes. Avec <code>00:00:09</code>, c'est clair : 0 heure, 0 minute, 9 secondes.</p>
+
+  <!-- ============ 10 ============ -->
+  <h2 id="s10">10. ⚠️ Problèmes connus</h2>
+
+  <div class="card danger">
+    <strong>❌ Le bouton Aide affiche "Cannot GET /AIDE.html"</strong><br>
+    ► Le fichier <code>AIDE.html</code> est absent du dossier.<br>
+    ► Vérifiez qu'il est bien à côté de <code>coupeur.html</code>.
+  </div>
+
+  <div class="card danger">
+    <strong>❌ La forme d'onde ne s'affiche pas</strong><br>
+    ► Le fichier n'est peut-être pas un format audio supporté.<br>
+    ► Essayez avec un MP3 classique pour tester.
+  </div>
+
+  <div class="card danger">
+    <strong>❌ Le son ne joue pas</strong><br>
+    ► Vérifiez le volume du PC et du navigateur.<br>
+    ► Certains navigateurs bloquent le son avant interaction : cliquez d'abord dans la page.
+  </div>
+
+  <div class="card danger">
+    <strong>❌ Le fichier coupé est vide ou incomplet</strong><br>
+    ► Vérifiez que <strong>Début</strong> est bien inférieur à <strong>Fin</strong>.<br>
+    ► Vérifiez que les deux temps sont compris entre <code>00:00:00</code> et la durée totale affichée.
+  </div>
+
+  <div class="footer">
+    🎵 Merci d'utiliser Coupeur MP3 ! 🎵<br>
+    <span style="font-size:12px">Version HTML 1.1 — 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
